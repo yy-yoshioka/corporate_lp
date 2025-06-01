@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="space-y-20">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden rounded-2xl">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-100 to-blue-100"></div>
         <div className="absolute inset-0 bg-white/40"></div>
 
@@ -47,135 +47,218 @@ export default function Home() {
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-indigo-300/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
-        {/* Tech Stack Icons */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-10 right-10 opacity-20 animate-float">
-            <svg className="w-20 h-20 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2L2 7L12 12L22 7L12 2Z" />
-              <path d="M2 17L12 22L22 17M2 12L12 17L22 12" />
-            </svg>
-          </div>
-          <div className="absolute bottom-20 left-10 opacity-20 animate-float-delayed">
-            <svg className="w-16 h-16 text-indigo-600" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M13.5 2C13.5 2.44425 13.3069 2.86399 12.9725 3.14017C12.6382 3.41635 12.1957 3.51926 11.7606 3.41555C11.3256 3.31185 10.9456 3.01065 10.7239 2.58787C10.5022 2.16508 10.4608 1.66117 10.6098 1.20666C10.7588 0.752159 11.0831 0.389423 11.5 0.214568V2H11.5ZM16.2404 3.41556C15.8053 3.51927 15.3629 3.41636 15.0285 3.14018C14.6942 2.864 14.501 2.44426 14.501 2C14.501 1.55574 14.6942 1.136 15.0285 0.859824C15.3629 0.583645 15.8053 0.480729 16.2404 0.584434C16.6754 0.688138 17.0554 0.989341 17.2771 1.41213C17.4988 1.83491 17.5402 2.33882 17.3912 2.79333C17.2422 3.24784 16.9179 3.61058 16.501 3.78543V2H16.5Z" />
-            </svg>
-          </div>
-          <div className="absolute top-40 left-32 opacity-15 animate-float">
-            <svg className="w-24 h-24 text-blue-500" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M9 13H15V19H9V13ZM3 13H7V19H3V13ZM17 13H21V19H17V13ZM13 3V11H21V3H13ZM15 5H19V9H15V5ZM3 3V11H11V3H3ZM5 5H9V9H5V5Z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Main Illustration */}
-        <div className="absolute right-0 bottom-0 w-1/3 h-full opacity-10 md:opacity-20">
-          <svg
-            className="w-full h-full"
-            viewBox="0 0 400 400"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="200"
-              cy="200"
-              r="150"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="text-blue-600"
-            />
-            <circle
-              cx="200"
-              cy="200"
-              r="120"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="text-indigo-600"
-            />
-            <circle
-              cx="200"
-              cy="200"
-              r="90"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="text-blue-600"
-            />
-            <path
-              d="M200 50 L250 150 L350 200 L250 250 L200 350 L150 250 L50 200 L150 150 Z"
-              fill="currentColor"
-              fillOpacity="0.1"
-              className="text-blue-600"
-            />
-          </svg>
-        </div>
-
         <div
-          className={`relative z-10 text-center px-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          className={`relative z-10 px-4 max-w-6xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
-          <div className="mb-6 inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full text-sm text-blue-700 font-medium shadow-sm">
-            <span className="animate-pulse w-2 h-2 bg-green-500 rounded-full"></span>
-            月間10社以上の新規PoC案件を担当中
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-blue-700 bg-clip-text text-transparent">
-            OffshoreFlowへようこそ
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-slate-700">
-            エンジニア単価を平均40%削減しながら納期を2倍速に短縮
-            <br />
-            日本人PMが要件整理、海外優秀チームが実装、最短2週間でMVPリリース
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact"
-              className="group bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              <span className="flex items-center justify-center gap-2">
-                30分無料相談を予約
-                <svg
-                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div>
+              <div className="mb-6 inline-flex items-center gap-2 bg-blue-600/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm text-blue-700 font-medium border border-blue-200">
+                <span className="animate-pulse w-2 h-2 bg-green-500 rounded-full"></span>
+                月間10社以上の新規PoC案件を担当中
+              </div>
+
+              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-slate-800 to-blue-700 bg-clip-text text-transparent">
+                  開発コストを
+                </span>
+                <br />
+                <span className="text-7xl md:text-8xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                  40%削減
+                </span>
+              </h1>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg
+                      className="w-6 h-6 text-green-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-800">最短2週間でMVPリリース</p>
+                    <p className="text-sm text-gray-600">要件定義から開発・納品まで高速対応</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg
+                      className="w-6 h-6 text-blue-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-800">24時間リレー開発で2倍速</p>
+                    <p className="text-sm text-gray-600">日本とベトナムのタイムゾーンを活用</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg
+                      className="w-6 h-6 text-purple-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-800">日本品質を保証</p>
+                    <p className="text-sm text-gray-600">日本人PMによる品質管理体制</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="group bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 text-center"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </span>
-            </Link>
-            <Link
-              href="/case-studies"
-              className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:scale-105"
-            >
-              導入事例5選を見る
-            </Link>
+                  <span className="flex items-center justify-center gap-2">
+                    30分無料相談を予約
+                    <svg
+                      className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
+                  </span>
+                </Link>
+                <a
+                  href="/download/offshore-guide"
+                  className="group border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full font-bold text-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 text-center"
+                >
+                  導入事例集をダウンロード
+                </a>
+              </div>
+            </div>
+
+            {/* Right Visual */}
+            <div className="relative">
+              <div className="relative bg-white rounded-2xl shadow-2xl p-8 border border-gray-100">
+                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                  期間限定50%OFF
+                </div>
+
+                <h3 className="text-2xl font-bold mb-6 text-gray-800 text-center">
+                  導入までの流れ
+                </h3>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                      1
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold">無料相談（30分）</p>
+                      <p className="text-sm text-gray-600">今すぐ相談可能</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                      2
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold">見積もり提出</p>
+                      <p className="text-sm text-gray-600">最短3営業日</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                      3
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold">開発スタート</p>
+                      <p className="text-sm text-gray-600">契約後1週間以内</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">
+                      4
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold">MVP納品</p>
+                      <p className="text-sm text-gray-600">最短2週間</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 text-center">
+                  <p className="text-3xl font-bold text-blue-600">合計: 最短3週間</p>
+                  <p className="text-sm text-gray-600 mt-1">で成果を実感できます</p>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Stats */}
-          <div className="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+          {/* Trust Indicators */}
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-700">500+</div>
-              <div className="text-sm text-slate-600">累計開発プロジェクト</div>
+              <div className="text-4xl font-bold text-blue-700">500+</div>
+              <div className="text-sm text-gray-600 mt-1">累計プロジェクト</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-700">95%</div>
-              <div className="text-sm text-slate-600">納期遵守率</div>
+              <div className="text-4xl font-bold text-blue-700">95%</div>
+              <div className="text-sm text-gray-600 mt-1">納期遵守率</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-700">80%</div>
-              <div className="text-sm text-slate-600">継続契約率</div>
+              <div className="text-4xl font-bold text-blue-700">40%</div>
+              <div className="text-sm text-gray-600 mt-1">平均コスト削減</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-blue-700">24/7</div>
+              <div className="text-sm text-gray-600 mt-1">サポート体制</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Our Strengths */}
-      <section className="px-4">
+      <section className="px-4 py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent">
-            なぜOffshoreFlowが選ばれるのか
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            なぜ
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              OffshoreFlow
+            </span>
+            が選ばれるのか
           </h2>
           <p className="text-center text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
             具体的な数値と実績で証明する、私たちの強み
@@ -189,6 +272,8 @@ export default function Home() {
                 icon: '💰',
                 gradient: 'from-emerald-500 to-teal-600',
                 stats: '実際の削減額：年間240万円',
+                percentage: 40,
+                color: 'emerald',
               },
               {
                 title: '納期遵守率95%',
@@ -197,26 +282,92 @@ export default function Home() {
                 icon: '⭐',
                 gradient: 'from-blue-500 to-indigo-600',
                 stats: '最短納期：MVP2週間',
+                percentage: 95,
+                color: 'blue',
               },
               {
                 title: 'バグ発生率1%未満',
                 description:
                   '日本人PMによる品質管理と、3段階のコードレビュー体制。本番環境でのバグ発生率を1%未満に抑制',
                 icon: '🚀',
-                gradient: 'from-slate-500 to-gray-600',
+                gradient: 'from-purple-500 to-pink-600',
                 stats: '品質スコア：98/100',
+                percentage: 98,
+                color: 'purple',
               },
             ].map((strength, index) => (
               <div key={index} className="group">
-                <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+                  {/* Background Decoration */}
                   <div
-                    className={`w-16 h-16 rounded-xl bg-gradient-to-r ${strength.gradient} flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    className={`absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br ${strength.gradient} opacity-10 rounded-full blur-3xl`}
+                  ></div>
+
+                  <div
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${strength.gradient} flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                   >
                     {strength.icon}
                   </div>
+
+                  {/* Progress Circle */}
+                  <div className="relative w-32 h-32 mx-auto mb-6">
+                    <svg className="transform -rotate-90 w-32 h-32">
+                      <circle
+                        cx="64"
+                        cy="64"
+                        r="56"
+                        stroke="#e5e7eb"
+                        strokeWidth="12"
+                        fill="none"
+                      />
+                      <circle
+                        cx="64"
+                        cy="64"
+                        r="56"
+                        stroke={`url(#gradient-${index})`}
+                        strokeWidth="12"
+                        fill="none"
+                        strokeDasharray={`${2 * Math.PI * 56}`}
+                        strokeDashoffset={`${2 * Math.PI * 56 * (1 - strength.percentage / 100)}`}
+                        className="transition-all duration-1000"
+                      />
+                      <defs>
+                        <linearGradient id={`gradient-${index}`}>
+                          <stop
+                            offset="0%"
+                            stopColor={
+                              strength.color === 'emerald'
+                                ? '#10b981'
+                                : strength.color === 'blue'
+                                  ? '#3b82f6'
+                                  : '#9333ea'
+                            }
+                          />
+                          <stop
+                            offset="100%"
+                            stopColor={
+                              strength.color === 'emerald'
+                                ? '#14b8a6'
+                                : strength.color === 'blue'
+                                  ? '#4f46e5'
+                                  : '#ec4899'
+                            }
+                          />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-3xl font-bold text-gray-800">
+                        {strength.percentage}%
+                      </span>
+                    </div>
+                  </div>
+
                   <h3 className="text-xl font-bold mb-3 text-gray-800">{strength.title}</h3>
                   <p className="text-gray-600 leading-relaxed mb-4">{strength.description}</p>
-                  <div className="text-sm font-bold text-blue-600 bg-blue-50 inline-block px-3 py-1 rounded-full">
+                  <div
+                    className={`text-sm font-bold text-${strength.color}-600 bg-${strength.color}-50 inline-block px-4 py-2 rounded-full`}
+                  >
                     {strength.stats}
                   </div>
                 </div>
@@ -297,6 +448,25 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* CTA for Services */}
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 mb-6">どのサービスが最適かお悩みですか？</p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            >
+              無料で最適プランをご提案
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
@@ -470,6 +640,114 @@ export default function Home() {
                 />
               </svg>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="px-4 py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
+            お客様の
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              声
+            </span>
+          </h2>
+          <p className="text-center text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
+            実際にご利用いただいたお客様からの評価
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                company: '株式会社テックイノベーション',
+                industry: 'IT・ソフトウェア',
+                name: '田中 太郎',
+                position: 'CTO',
+                comment:
+                  'OffshoreFlowのおかげで開発スピードが2倍になりました。日本人PMの存在が大きく、要件の行き違いがありません。品質も国内開発と変わらず、むしろ向上しました。',
+                rating: 5,
+                image: '🏢',
+              },
+              {
+                company: 'デジタルマーケティング株式会社',
+                industry: 'マーケティング',
+                name: '佐藤 花子',
+                position: 'プロダクトマネージャー',
+                comment:
+                  'コスト削減だけでなく、提案力の高さに驚きました。私たちが気づかなかった改善点を積極的に提案してくれ、結果的にユーザー満足度が30%向上しました。',
+                rating: 5,
+                image: '📊',
+              },
+              {
+                company: 'フィンテックスタートアップ',
+                industry: '金融',
+                name: '鈴木 一郎',
+                position: 'CEO',
+                comment:
+                  'スタートアップには予算の制約がありますが、OffshoreFlowなら高品質な開発を手頃な価格で実現できます。MVP開発が2週間で完了し、すぐに市場検証できました。',
+                rating: 5,
+                image: '💳',
+              },
+            ].map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center text-2xl">
+                      {testimonial.image}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-800">{testimonial.company}</h4>
+                      <p className="text-sm text-gray-500">{testimonial.industry}</p>
+                    </div>
+                  </div>
+                  <div className="flex gap-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <svg
+                        key={i}
+                        className="w-5 h-5 text-yellow-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+
+                <blockquote className="text-gray-600 mb-6 italic">
+                  &ldquo;{testimonial.comment}&rdquo;
+                </blockquote>
+
+                <div className="flex items-center gap-2 text-sm">
+                  <span className="font-semibold text-gray-800">{testimonial.name}</span>
+                  <span className="text-gray-500">•</span>
+                  <span className="text-gray-500">{testimonial.position}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <div className="inline-flex items-center gap-8 bg-white rounded-2xl px-8 py-6 shadow-lg">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">4.9/5.0</div>
+                <div className="text-sm text-gray-600">平均評価</div>
+              </div>
+              <div className="w-px h-12 bg-gray-300"></div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">98%</div>
+                <div className="text-sm text-gray-600">顧客満足度</div>
+              </div>
+              <div className="w-px h-12 bg-gray-300"></div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">85%</div>
+                <div className="text-sm text-gray-600">リピート率</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
