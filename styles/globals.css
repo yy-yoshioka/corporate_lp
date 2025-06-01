@@ -5,6 +5,22 @@
 :root {
   --background: #f8fafc;
   --foreground: #1e293b;
+
+  /* Primary Colors */
+  --primary-blue: #3b82f6;
+  --primary-indigo: #4f46e5;
+  --primary-gradient: linear-gradient(to right, var(--primary-blue), var(--primary-indigo));
+
+  /* Secondary Colors */
+  --secondary-emerald: #10b981;
+  --secondary-purple: #9333ea;
+  --secondary-orange: #f97316;
+
+  /* Neutral Colors */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-600: #4b5563;
+  --gray-800: #1f2937;
 }
 
 @theme inline {
@@ -48,6 +64,83 @@ body {
   line-height: 1.7;
   letter-spacing: 0.02em;
   min-height: 100vh;
+}
+
+/* Typography System */
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+p {
+  font-size: clamp(0.95rem, 2vw, 1.125rem);
+  line-height: 1.8;
+}
+
+/* Button System */
+.btn-primary {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px -5px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+  border: 2px solid var(--gray-300);
+  color: var(--gray-700);
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background: var(--gray-50);
+  border-color: var(--gray-400);
+}
+
+/* Card System */
+.card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.15);
 }
 
 /* Custom scrollbar */
