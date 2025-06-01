@@ -8,9 +8,14 @@ export default function Header() {
     <header className="bg-white/95 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto flex justify-between items-center p-4">
         <Link href="/" className="group">
-          <span className="font-bold text-2xl bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:to-slate-700 transition-all duration-300">
-            マイコープ
-          </span>
+          <div className="flex items-center gap-1">
+            <span className="font-bold text-2xl bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:to-slate-700 transition-all duration-300">
+              Offshore
+            </span>
+            <span className="font-extrabold text-2xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              Flow
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
