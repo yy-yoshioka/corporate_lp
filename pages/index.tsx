@@ -12,30 +12,31 @@ export default function Home() {
     <div className="space-y-20">
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-800"></div>
-        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-blue-900 to-indigo-900"></div>
+        <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-400/30 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-400/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
         <div
           className={`relative z-10 text-center text-white px-4 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-            Welcome to MyCorp
+            マイコープへようこそ
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-blue-100">
-            Offshore development with Japanese direction for cost savings and quality. Transform
-            your ideas into reality with our expert team.
+          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed text-blue-100">
+            日本品質のオフショア開発で、コスト削減と高品質を両立
+            <br />
+            お客様のアイデアを、私たちの専門チームが現実に変えます
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="group bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              className="group bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               <span className="flex items-center justify-center gap-2">
-                Contact Us
+                お問い合わせ
                 <svg
                   className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                   fill="none"
@@ -53,9 +54,9 @@ export default function Home() {
             </Link>
             <Link
               href="/services"
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-105"
             >
-              Our Services
+              サービス一覧
             </Link>
           </div>
         </div>
@@ -64,37 +65,37 @@ export default function Home() {
       {/* Our Strengths */}
       <section className="px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Our Strengths
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent">
+            私たちの強み
           </h2>
           <p className="text-center text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
-            We deliver exceptional results through our core competencies
+            確かな技術力と日本品質で、お客様のビジネスを成功に導きます
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Cost Effective',
-                description: 'Optimize your budget without compromising quality',
+                title: 'コスト効率',
+                description: '品質を維持しながら、開発コストを最適化いたします',
                 icon: '💰',
-                gradient: 'from-green-400 to-blue-500',
+                gradient: 'from-emerald-500 to-teal-600',
               },
               {
-                title: 'High Quality',
-                description: 'Rigorous testing and quality assurance processes',
+                title: '高品質',
+                description: '厳格なテストと品質保証プロセスで確実な成果をお約束',
                 icon: '⭐',
-                gradient: 'from-purple-400 to-pink-500',
+                gradient: 'from-blue-500 to-indigo-600',
               },
               {
-                title: 'Fast Delivery',
-                description: 'Agile development for rapid time-to-market',
+                title: '迅速な納期',
+                description: 'アジャイル開発手法により、スピーディーな市場投入を実現',
                 icon: '🚀',
-                gradient: 'from-orange-400 to-red-500',
+                gradient: 'from-slate-500 to-gray-600',
               },
             ].map((strength, index) => (
               <div key={index} className="group">
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${strength.gradient} flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 rounded-xl bg-gradient-to-r ${strength.gradient} flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}
                   >
                     {strength.icon}
                   </div>
@@ -108,38 +109,40 @@ export default function Home() {
       </section>
 
       {/* Services */}
-      <section className="px-4 bg-gradient-to-br from-gray-50 to-blue-50 py-20">
+      <section className="px-4 bg-gradient-to-br from-gray-50 to-slate-50 py-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Services
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent">
+            サービス
           </h2>
           <p className="text-center text-gray-600 mb-12 text-lg max-w-2xl mx-auto">
-            Comprehensive solutions tailored to your business needs
+            お客様のビジネスニーズに合わせた包括的なソリューションを提供
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Service A',
+                title: 'Webシステム開発',
                 description:
-                  'Comprehensive web development solutions with modern frameworks and best practices',
+                  '最新のフレームワークとベストプラクティスを活用した、包括的なWebシステム開発ソリューション',
                 icon: '🌐',
                 color: 'blue',
               },
               {
-                title: 'Service B',
-                description: 'Mobile app development for iOS and Android with native performance',
+                title: 'モバイルアプリ開発',
+                description:
+                  'iOS・Android対応のネイティブパフォーマンスを実現するモバイルアプリケーション開発',
                 icon: '📱',
-                color: 'purple',
+                color: 'indigo',
               },
               {
-                title: 'Service C',
-                description: 'Cloud infrastructure and DevOps solutions for scalable applications',
+                title: 'クラウドソリューション',
+                description:
+                  'スケーラブルなアプリケーション構築のためのクラウドインフラとDevOpsソリューション',
                 icon: '☁️',
-                color: 'indigo',
+                color: 'slate',
               },
             ].map((service, index) => (
               <div key={index} className="group">
-                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 h-full">
+                <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 h-full">
                   <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">
                     {service.icon}
                   </div>
@@ -149,7 +152,7 @@ export default function Home() {
                     href="/services"
                     className={`inline-flex items-center gap-2 text-${service.color}-600 font-semibold hover:text-${service.color}-700 transition-colors group-hover:gap-3 transition-all duration-300`}
                   >
-                    Learn more
+                    詳細を見る
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
@@ -169,21 +172,21 @@ export default function Home() {
       {/* CTA Section */}
       <section className="px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center text-white relative overflow-hidden">
+          <div className="bg-gradient-to-r from-slate-800 to-blue-900 rounded-2xl p-12 text-center text-white relative overflow-hidden">
             <div className="absolute inset-0">
               <div className="absolute top-0 left-0 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
               <div className="absolute bottom-0 right-0 w-60 h-60 bg-white/10 rounded-full blur-2xl"></div>
             </div>
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">プロジェクトを始めませんか？</h2>
               <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-                Get in touch for consultation and estimation. Let&apos;s bring your vision to life.
+                お気軽にご相談・お見積りをご依頼ください。お客様のビジョンを現実に変えるお手伝いをいたします。
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Contact Us Today
+                今すぐお問い合わせ
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"

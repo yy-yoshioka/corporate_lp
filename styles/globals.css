@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700;800&display=swap');
 
 :root {
   --background: #ffffff;
@@ -9,7 +10,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: 'Inter', var(--font-geist-sans);
+  --font-sans: 'Noto Sans JP', 'Inter', var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -28,6 +29,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family:
+    'Noto Sans JP',
     'Inter',
     -apple-system,
     BlinkMacSystemFont,
@@ -42,7 +44,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
 }
 
 /* Custom scrollbar */
@@ -51,33 +54,48 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f8fafc;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  background: linear-gradient(to bottom, #475569, #1e40af);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #2563eb, #7c3aed);
+  background: linear-gradient(to bottom, #334155, #1d4ed8);
 }
 
 /* Selection styles */
 ::selection {
-  background: rgba(59, 130, 246, 0.3);
+  background: rgba(71, 85, 105, 0.3);
   color: inherit;
 }
 
 ::-moz-selection {
-  background: rgba(59, 130, 246, 0.3);
+  background: rgba(71, 85, 105, 0.3);
   color: inherit;
 }
 
 /* Focus styles */
 *:focus {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #1e40af;
   outline-offset: 2px;
+}
+
+/* Japanese typography improvements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+p {
+  line-height: 1.8;
 }
 
 /* Animation utilities */

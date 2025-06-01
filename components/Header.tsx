@@ -8,26 +8,26 @@ export default function Header() {
     <header className="bg-white/95 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto flex justify-between items-center p-4">
         <Link href="/" className="group">
-          <span className="font-bold text-2xl bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent group-hover:from-purple-600 group-hover:to-blue-600 transition-all duration-300">
-            MyCorp
+          <span className="font-bold text-2xl bg-gradient-to-r from-slate-700 to-blue-700 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:to-slate-700 transition-all duration-300">
+            マイコープ
           </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
           {[
-            { href: '/about', label: 'About' },
-            { href: '/services', label: 'Services' },
-            { href: '/projects', label: 'Projects' },
-            { href: '/contact', label: 'Contact' },
+            { href: '/about', label: '会社概要' },
+            { href: '/services', label: 'サービス' },
+            { href: '/projects', label: '実績' },
+            { href: '/contact', label: 'お問い合わせ' },
           ].map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300 relative group"
+              className="text-gray-700 hover:text-blue-700 font-medium transition-colors duration-300 relative group"
             >
               {item.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-slate-700 to-blue-700 group-hover:w-full transition-all duration-300"></span>
             </Link>
           ))}
         </nav>
@@ -62,15 +62,15 @@ export default function Header() {
         <div className="md:hidden bg-white border-t border-gray-200 shadow-lg">
           <nav className="flex flex-col space-y-1 p-4">
             {[
-              { href: '/about', label: 'About' },
-              { href: '/services', label: 'Services' },
-              { href: '/projects', label: 'Projects' },
-              { href: '/contact', label: 'Contact' },
+              { href: '/about', label: '会社概要' },
+              { href: '/services', label: 'サービス' },
+              { href: '/projects', label: '実績' },
+              { href: '/contact', label: 'お問い合わせ' },
             ].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 font-medium transition-colors duration-300 px-4 py-2 rounded-lg"
+                className="text-gray-700 hover:text-blue-700 hover:bg-blue-50 font-medium transition-colors duration-300 px-4 py-2 rounded-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.label}
