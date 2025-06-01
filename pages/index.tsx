@@ -154,7 +154,7 @@ export default function Home() {
           </div>
 
           {/* Stats */}
-          <div className="mt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-8 max-w-3xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-700">500+</div>
               <div className="text-sm text-slate-600">プロジェクト完了</div>
@@ -162,6 +162,14 @@ export default function Home() {
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-700">98%</div>
               <div className="text-sm text-slate-600">顧客満足度</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-700">95%</div>
+              <div className="text-sm text-slate-600">納期遵守率</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-700">1%未満</div>
+              <div className="text-sm text-slate-600">バグ発生率</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-700">24/7</div>
@@ -184,19 +192,19 @@ export default function Home() {
             {[
               {
                 title: 'コスト効率',
-                description: '品質を維持しながら、開発コストを最適化いたします',
+                description: 'エンジニア単価を平均40%削減しながら品質を確保',
                 icon: '💰',
                 gradient: 'from-emerald-500 to-teal-600',
               },
               {
                 title: '高品質',
-                description: '厳格なテストと品質保証プロセスで確実な成果をお約束',
+                description: '納期遵守率95%、バグ発生率1%未満を維持する品質管理',
                 icon: '⭐',
                 gradient: 'from-blue-500 to-indigo-600',
               },
               {
                 title: '迅速な納期',
-                description: 'アジャイル開発手法により、スピーディーな市場投入を実現',
+                description: '24時間リレー開発で他社比2倍速の納期短縮',
                 icon: '🚀',
                 gradient: 'from-slate-500 to-gray-600',
               },
@@ -230,22 +238,19 @@ export default function Home() {
             {[
               {
                 title: 'Webシステム開発',
-                description:
-                  '最新のフレームワークとベストプラクティスを活用した、包括的なWebシステム開発ソリューション',
+                description: '年間50件以上の実績。PoCから本番運用まで一貫してサポートします',
                 icon: '🌐',
                 color: 'blue',
               },
               {
                 title: 'モバイルアプリ開発',
-                description:
-                  'iOS・Android対応のネイティブパフォーマンスを実現するモバイルアプリケーション開発',
+                description: 'ストア評価平均4.5以上のアプリを多数リリースしています',
                 icon: '📱',
                 color: 'indigo',
               },
               {
                 title: 'クラウドソリューション',
-                description:
-                  'スケーラブルなアプリケーション構築のためのクラウドインフラとDevOpsソリューション',
+                description: '月間20万ユーザー対応のスケーラブル基盤とDevOpsを提供',
                 icon: '☁️',
                 color: 'slate',
               },
@@ -287,15 +292,15 @@ export default function Home() {
               <div className="absolute bottom-0 right-0 w-60 h-60 bg-white/10 rounded-full blur-2xl"></div>
             </div>
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">プロジェクトを始めませんか？</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">まずは無料相談から</h2>
               <p className="text-xl mb-8 text-blue-50 max-w-2xl mx-auto">
-                お気軽にご相談・お見積りをご依頼ください。お客様のビジョンを現実に変えるお手伝いをいたします。
+                30分のオンラインヒアリングで課題を整理し、最短3日で概算見積りをご提示します。
               </p>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                今すぐお問い合わせ
+                無料相談を予約
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
